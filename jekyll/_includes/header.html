@@ -1,0 +1,24 @@
+<header>
+    <div class="[ container-xl py-3 ]">
+        <div class="[ row ]">
+            <div class="[ col-xl-3 ]">
+                <h1 class="[ m-0 ] logo">
+                    <a href="/">
+                        <img src="/assets/img/logo-01.png" align="{{ site.title }}">
+                    </a>
+                </h1>
+            </div>
+            <div class="[ col-xl-9 ]">
+                <nav class="[  ] main-menu">
+                    <ul class="[ nav ]">
+                        {% for link in site.data.navigation %}
+                        <li class="[ nav-item ]">
+                            <a href="{{ link.url }}" class="[ nav-link ]">{{ link.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

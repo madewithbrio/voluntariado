@@ -1,0 +1,23 @@
+:root {
+  --text-color: $text-color;
+  --primary-color: $primary-color;
+}
+
+.logo a img {
+  max-height: 60px;
+}
+
+.main-menu .nav-link {
+  padding: 0 1em;
+  line-height: 60px;
+  color: var(--text-color);
+}
+.main-menu .nav-link:hover {
+  color: var(--primary-color);
+}
+
+.section-search {
+  background: var(--primary-color);
+}
+
+/*# sourceMappingURL=base.css.map */
