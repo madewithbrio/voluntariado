@@ -8,19 +8,54 @@ id: homepage
 
 <div class="[  ] main">
 
-    <section class="[ py-5 ] section-search">
+    <section class="[ py-5 mb-5 ] section-search">
         <div class="[ container-xl ]">
-            <header class="[  ] section-header">
-                <h2 class="[ m-0 ] section-title">Hero + Pesquisa</h2>
-            </header>
+            <div class="[ row ]">
+                <div class="[ col-xl-6 ]">
+                    <h2 class="[ font-weight-900 text-uppercase ]">Para dar a mão,<br>basta mexer um dedo</h2>
+                    <div>O ponto de encontro entre a procura e oferta de trabalho voluntário.</div>
+                    <a class="[ btn btn-dark mt-3 ]" href="#">Precisa de voluntários?</a>
+                </div>
+                <div class="[ col-xl-6 ]">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="" placeholder="email" aria-describedby="">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="">
+                        </div>
+                        <button type="submit" class="btn btn-secondary">
+                            <i data-feather="search"></i>
+                            <span>Procurar</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
     <div class="[ container-xl ] main">
         <section class="[ mb-5 ] ">
-            <header class="[  ] section-header">
+            <header class="[ mb-3 ] section-header">
                 <h2 class="[ m-0 ] section-title">Últimas oportunidades</h2>
             </header>
+            <ul class="[ row mb-0 ] opportunity-list">
+                {% for opportunity in site.data.opportunities %}
+                <li class="[ col-xl-3 ]">
+                    <a href="" class="[ p-3 ] opportunity">
+                        <h6 class="[  ] opportunity-title">{{ opportunity.title }}</h6>
+                        <div class="[  ] opportunity-organization">{{ opportunity.organization }}</div>
+                        <div class="[  ] opportunity-location">
+                            <span>{{ opportunity.municipality }}</span>
+                            <span>&middot;</span>
+                            <span>{{ opportunity.district }}</span>
+                        </div>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
         </section>
         <section class="[ mb-5 ] ">
             <header class="[  ] section-header">

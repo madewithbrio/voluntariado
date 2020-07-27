@@ -4,7 +4,7 @@ exclude: [".gitignore", "Gruntfile.js", ".travis.yml", "fonts", "less", "presski
 destination: ./_site
 
 # SITE TITLE
-title: Bolsa de Voluntariado
+title: Bolsa do Voluntariado
 
 # URLS
 host: 0.0.0.0
