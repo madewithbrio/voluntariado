@@ -1,0 +1,125 @@
+---
+layout: default
+title: Oportunidades
+description: ""
+base_path: ./
+id: oportunidades
+---
+
+<div class="[ container-xl ] main">
+    <div class="[ row ]">
+        <div class="[ col-3 ]">
+            <form>
+                <div class="form-group">
+                    <input type="search" placeholder="o que procura?" name="" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="[ d-none ]">Tipo de compromisso</label>
+                    <select class="[ custom-select form-control ]" id="">
+                        <option selected>tipo de compromisso</option>
+                        <option>regular</option>
+                        <option>ocasional</option>
+                    </select>
+                    <small id="" class="[ d-none form-text ]">Pode escolher vários</small>
+                </div>
+                {% comment %}
+                <div class="form-group">
+                    <label class="[ d-none ]">País</label>
+                    <select class="[ custom-select form-control ]" id="">
+                        <option selected>Portugal</option>
+                    </select>
+                    <small id="" class="[ d-none form-text ]">Pode escolher vários</small>
+                </div>
+                {% endcomment %}
+                <div class="[ form-group ] ">
+                    <h6 class="[  ] form-group-label">Distritos</h6>
+                    <div class="[ p-3 ] way-too-many-checkboxes">
+                        <div class="[  ] checkboxes">
+                            {% for i in (1..18) %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="district{{ i }}">
+                                <label class="form-check-label" for="district{{ i }}">Distrito {{ i }} (99)</label>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="[ form-group ] ">
+                    <h6 class="[  ] form-group-label">Concelhos</h6>
+                    <div class="[ p-3 ] way-too-many-checkboxes">
+                        <div class="[  ] checkboxes">
+                            {% for i in (1..20) %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="municipality{{ i }}">
+                                <label class="form-check-label" for="municipality{{ i }}">Concelho {{ i }} (99)</label>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="[ form-group ] ">
+                    <h6 class="[  ] form-group-label">Áreas</h6>
+                    <div class="[ p-3 ] way-too-many-checkboxes">
+                        <div class="[  ] checkboxes">
+                            {% for i in (1..20) %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="area{{ i }}">
+                                <label class="form-check-label" for="area{{ i }}">Área {{ i }} (99)</label>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="[ form-group ] ">
+                    <h6 class="[  ] form-group-label">Grupos alvo</h6>
+                    <div class="[ p-3 ] way-too-many-checkboxes">
+                        <div class="[  ] checkboxes">
+                            {% for i in (1..18) %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="target{{ i }}">
+                                <label class="form-check-label" for="target{{ i }}">Distrito {{ i }} (99)</label>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="[ col-9 ]">
+            <div class="[ mb-4 ] page-header">
+                <h1 class="[ mb-0 ]">Oportunidades</h1>
+                <div>154 resultados</div>
+            </div>
+            <ul class="[ row mb-0 ] opportunity-list">
+                {% for opportunity in site.data.opportunities %}
+                {% include opportunity-list-item.html
+                    classes="col-xl-12 pl-3 pr-0 mb-3"
+                 %}
+                {% endfor %}
+            </ul>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Anterior">
+                        <span aria-hidden="true">Anterior</span>
+                    </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Próxima">
+                        <span aria-hidden="true">Próxima</span>
+                    </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

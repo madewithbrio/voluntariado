@@ -1,0 +1,21 @@
+<footer id="footer">
+    <div class="[ container-xl py-5 ]">
+        <div class="[ row ]">
+            <div class="[ col ]">
+                <h3>{{ site.title }}</h3>
+                <nav class="[  ] footer-menu">
+                    <ul class="[ nav flex-column ]">
+                        {% for link in site.data.navigationfooter %}
+                        <li class="[ nav-item ]">
+                            <a href="{{ link.url }}" class="[ nav-link ]">{{ link.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+            <div class="[ col ]">
+                outras cenas
+            </div>
+        </div>
+    </div>
+</footer>

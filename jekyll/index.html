@@ -8,64 +8,266 @@ id: homepage
 
 <div class="[  ] main">
 
-    <section class="[ py-5 mb-5 ] section-search">
+    <section class="[ _py-5 mt-n4 mb-5 ] section-hero-search">
         <div class="[ container-xl ]">
-            <div class="[ row ]">
-                <div class="[ col-xl-6 ]">
-                    <h2 class="[ font-weight-900 text-uppercase ]">Para dar a mão,<br>basta mexer um dedo</h2>
-                    <div>O ponto de encontro entre a procura e oferta de trabalho voluntário.</div>
-                    <a class="[ btn btn-dark mt-3 ]" href="#">Precisa de voluntários?</a>
+            <div class="[ row align-items-center ]">
+                <div class="[ col-xl-5 ]">
+                    <h2 class="[ fw-900 text-uppercase ]">Para dar a mão,<br>basta mexer um dedo</h2>
+                    <div class="[  ] pitch">A Bolsa do Voluntariado é o ponto de encontro entre a procura e oferta de voluntários.</div>
+                    <a class="[ btn btn-dark mt-3 ]" href="#">
+                        <i data-feather="users"></i>
+                        <span>Precisa de voluntários?</span>
+                    </a>
                 </div>
-                <div class="[ col-xl-6 ]">
+                <div class="[ col-xl-7 ]">
                     <form>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="" placeholder="email" aria-describedby="">
+                        <div class="[ form-row ]">
+                            <div class="[ col ]">
+                                <div class="form-group">
+                                    <input type="search" placeholder="como pretende ajudar?" name="" class="form-control">
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="">
+                        <div class="[ form-row ]">
+                            {% comment %}
+                            <div class="[ col ]">
+                                <div class="[ form-group ]">
+                                    <select class="[ custom-select form-control ]" id="" multiple>
+                                        <option selected>Portugal</option>
+                                        <option>Espanha</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="[ col ]">
+                                <div class="form-group">
+                                    <label class="[ d-none ]">Área de actuação</label>
+                                    <select class="[ custom-select form-control ]" id="" _multiple>
+                                        <option>todas as áreas</option>
+                                    </select>
+                                    <small id="" class="[ d-none form-text ]">Pode escolher vários</small>
+                                </div>
+                            </div>
+                            <div class="[ col ]">
+                                <div class="form-group">
+                                    <label class="[ d-none ]">Grupos alvo</label>
+                                    <select class="[ custom-select form-control ]" id="" _multiple>
+                                        <option>todos os grupos alvo</option>
+                                    </select>
+                                    <small id="" class="[ d-none form-text ]">Pode escolher vários</small>
+                                </div>
+                            </div>
+                            {% endcomment %}
+                            <div class="[ col ]">
+                                <div class="[ form-group ]">
+                                    <label class="[ d-none ]">Distrito</label>
+                                    <select class="[ custom-select form-control ]" id="" _multiple>
+                                        <option selected>todos os distritos</option>
+                                        <option>Lisboa</option>
+                                        <option>Porto</option>
+                                        <option>Viana do Castelo</option>
+                                        <option>Braga</option>
+                                        <option>Faro</option>
+                                        <option>Beja</option>
+                                        <option>Leiria</option>
+                                        <option>Porto</option>
+                                    </select>
+                                    <small id="" class="[ d-none form-text ]">Pode escolher vários</small>
+                                </div>
+                            </div>
+                            <div class="[ col ]">
+                                <div class="form-group">
+                                    <label class="[ d-none ]">Concelho</label>
+                                    <select class="[ custom-select form-control ]" id="" disabled _multiple>
+                                        <option>todos os concelhos</option>
+                                        <option>Lisboa</option>
+                                        <option>Cascais</option>
+                                        <option>Oeiras</option>
+                                        <option>Odivelas</option>
+                                        <option>Amadora</option>
+                                        <option>Sintra</option>
+                                    </select>
+                                    <small id="" class="[ d-none form-text ]">Pode escolher vários</small>
+                                </div>
+                            </div>
+                            <div class="[ col ]">
+                                <div class="form-group">
+                                    <label class="[ d-none ]">Pesquise</label>
+                                    <button type="submit" class="[ btn btn-secondary w-100 ]">
+                                        <i data-feather="search"></i>
+                                        <span>Pesquisar</span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-secondary">
-                            <i data-feather="search"></i>
-                            <span>Procurar</span>
-                        </button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="[ container-xl ] main">
+    <div class="[ container-xl ]">
         <section class="[ mb-5 ] ">
-            <header class="[ mb-3 ] section-header">
-                <h2 class="[ m-0 ] section-title">Últimas oportunidades</h2>
+            <header class="[ mb-4 ] section-header">
+                <div class="[ row ]">
+                    <div class="[ col ]">
+                        <h2 class="[ m-0 ] section-title">
+                            <a href="/oportunidades">Novas oportunidades</a>
+                            <i data-feather="smile"></i>
+                        </h2>
+                    </div>
+                    <div class="[ col ]">
+                        <a href="/oportunidades" class="[ btn btn-light float-right ]">Ver todas</a>
+                    </div>
+                </div>
             </header>
-            <ul class="[ row mb-0 ] opportunity-list">
+            <ul class="[ row mx-lg-n2 mb-0 ] opportunity-list">
                 {% for opportunity in site.data.opportunities %}
-                <li class="[ col-xl-3 ]">
-                    <a href="" class="[ p-3 ] opportunity">
-                        <h6 class="[  ] opportunity-title">{{ opportunity.title }}</h6>
-                        <div class="[  ] opportunity-organization">{{ opportunity.organization }}</div>
-                        <div class="[  ] opportunity-location">
-                            <span>{{ opportunity.municipality }}</span>
-                            <span>&middot;</span>
-                            <span>{{ opportunity.district }}</span>
+                {% include opportunity-list-item.html
+                    classes="col-xl-3 px-lg-2 _pl-3 _pr-0 mb-3"
+                %}
+                {% endfor %}
+            </ul>
+        </section>
+        <section class="[ mb-5 ] section-organizations">
+            <header class="[ mb-4 ] section-header">
+                <div class="[ row ]">
+                    <div class="[ col-xl-9 ]">
+                        <h2 class="[ m-0 ] section-title">
+                            <a href="/organizacoes">Organizações</a>
+                            <i data-feather="users"></i>
+                        </h2>
+                        <div class="[ mt-3 ]">Nem todas as organizações têm a capacidade de gerir diariamente as oportunidades aqui na Bolsa do Voluntariado. Encontre quem precisa de ajuda perto de si e <strong>contacte-os você mesmo</strong>.</div>
+                    </div>
+                    <div class="[ col-xl-3 ]">
+                        <a href="/organizacoes" class="[ btn btn-light float-right ]">Ver todas</a>
+                    </div>
+                </div>
+            </header>
+            <div class="[ row ]">
+                <div class="[ col-9 ]">
+                </div>
+                <div class="[ col-3 ]">
+                    <div class="[ p-3 ] organization-search">
+                        <h4>Perto de si</h4>
+                        <div class="[ mb-3 ]" style="font-size:0.75rem;">Encontre organizações perto de si que precisam da sua ajuda</div>
+                        <form>
+                            <div class="[ form-row ]">
+                                <div class="[ col ]">
+                                    <div class="[ form-group ]">
+                                        <label class="[ d-none ]">Distrito</label>
+                                        <select class="[ custom-select form-control ]" id="" _multiple>
+                                            <option selected>escolha um distrito</option>
+                                            <option>Lisboa</option>
+                                            <option>Porto</option>
+                                            <option>Viana do Castelo</option>
+                                            <option>Braga</option>
+                                            <option>Faro</option>
+                                            <option>Beja</option>
+                                            <option>Leiria</option>
+                                            <option>Porto</option>
+                                        </select>
+                                        <small id="" class="[ d-none form-text ]">Pode escolher vários</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="[ form-row ]">
+                                <div class="[ col ]">
+                                    <div class="form-group">
+                                        <label class="[ d-none ]">Concelho</label>
+                                        <select class="[ custom-select form-control ]" id="" disabled _multiple>
+                                            <option>escolha um concelho</option>
+                                            <option>Lisboa</option>
+                                            <option>Cascais</option>
+                                            <option>Oeiras</option>
+                                            <option>Odivelas</option>
+                                            <option>Amadora</option>
+                                            <option>Sintra</option>
+                                        </select>
+                                        <small id="" class="[ d-none form-text ]">Pode escolher vários</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="[ form-row ]">
+                                <div class="[ col ]">
+                                    <div class="form-group">
+                                        <button type="submit" class="[ btn btn-primary w-100 ]">
+                                            <i data-feather="search"></i>
+                                            <span>Pesquisar</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="[ py-5 mb-5 ] section-testemonials-ctn">
+        <section class="[ container-xl ] section-testemonials">
+            <header class="[ mb-4 ] section-header">
+                <div class="[ row ]">
+                    <div class="[ col ]">
+                        <h2 class="[ m-0 _text-center ] section-title">
+                            <a href="">Testemunhos</a>
+                            <i data-feather="message-circle"></i>
+                        </h2>
+                    </div>
+                    <div class="[ col ]">
+                        <a href="" class="[ btn btn-light float-right ]">Ver todos</a>
+                    </div>
+                </div>
+            </header>
+            <ul class="[ row mb-0 ] testemonial-list">
+                {% for testemonial in site.data.testemonials %}
+                <li class="[ col-xl-2 ]">
+                    <a href="" class="[ text-center ] testemonial">
+                        <div class="[ mx-auto mb-2 ] testemonial-image">
+                            <div class="[  ] play">
+                                <i data-feather="play-circle"></i>
+                            </div>
+                            <img src="{{ testemonial.image }}" alt="{{ testemonial.title }}">
                         </div>
+                        <h6 class="[ mb-0 ] testemonial-title">{{ testemonial.title }}</h6>
+                        <div class="[  ] testemonial-organization">{{ testemonial.organization }}</div>
+                        <div class="[ mt-2 ] testemonial-description">{{ testemonial.description }}</div>
                     </a>
                 </li>
                 {% endfor %}
             </ul>
         </section>
-        <section class="[ mb-5 ] ">
-            <header class="[  ] section-header">
-                <h2 class="[ m-0 ] section-title">Testemunhos</h2>
+    </div>
+    <div class="[ container-xl ]">
+        <section class="[ mb-5 ] section-news">
+            <header class="[ mb-4 ] section-header">
+                <div class="[ row ]">
+                    <div class="[ col ]">
+                        <h2 class="[ m-0 _text-center ] section-title">
+                            <a href="/novidades">Novidades</a>
+                            <i data-feather="alert-triangle"></i>
+                        </h2>
+                    </div>
+                    <div class="[ col ]">
+                        <a href="/novidades" class="[ btn btn-light float-right ]">Ver todas</a>
+                    </div>
+                </div>
             </header>
-        </section>
-        <section class="[ mb-5 ] ">
-            <header class="[  ] section-header">
-                <h2 class="[ m-0 ] section-title">Instituições e Empresas</h2>
-            </header>
+            <ul class="[ row mb-0 ] article-list">
+                {% for article in site.data.news %}
+                <li class="[ col-xl-3 ]">
+                    <div  class="[  ] article">
+                        <a href="" class="[ mx-auto mb-2 ] article-image">
+                            <img src="{{ article.image }}" alt="{{ article.title }}">
+                        </a>
+                        <div class="[  ] article-date">{{ article.date }}</div>
+                        <h6 class="[ mb-1 ] article-title">
+                            <a href="">{{ article.title }}</a>
+                        </h6>
+                        <div class="[  ] article-lead">{{ article.lead }}</div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
         </section>
     </div>
 </div>

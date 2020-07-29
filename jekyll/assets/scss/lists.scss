@@ -1,0 +1,147 @@
+.opportunity-list {
+    padding:0;
+    list-style-type: none;
+    li {
+        .opportunity {
+            display: block;
+            //min-height:200px;
+            height:100%;
+            color: var(--text-color);
+            border:1px solid rgba(var(--text-color-rgb),0.2);
+            border-radius: 0.25rem;
+            .opportunity-title {
+                font-weight:700;
+            }
+            .opportunity-organization {
+                font-size: 0.75rem;
+                font-weight: 500;
+                line-height: 1.2em;
+            }
+            .opportunity-location {
+                font-size: 0.75rem;
+                font-weight: 500;
+                opacity:0.33;
+            }
+            &:hover {
+                background-color:rgba(var(--primary-color-rgb),0.05);
+                color: var(--primary-color);
+                border-color:var(--primary-color);
+                text-decoration:none;
+            }
+        }
+    }
+}
+
+.testemonial-list {
+    padding:0;
+    list-style-type: none;
+    li {
+        .testemonial {
+            display: block;
+            color: var(--text-color);
+            .testemonial-image {
+                position:relative;
+                width:140px;
+                height:140px;
+                background-color:var(--primary-color);
+                border-radius:100%;
+                overflow:hidden;
+                img {
+                    position: absolute;
+                    z-index:1;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    height:100%;
+                    object-fit:cover;
+                }
+                .play {
+                    position: absolute;
+                    z-index:2;
+                    top:50%;
+                    left:50%;
+                    width:50px;
+                    height:50px;
+                    line-height:50px;
+                    text-align: center;
+                    //background:rgba(0,0,0,0.33);
+                    //background:rgba(255,255,255,0.2);
+                    //border:1px solid rgba(255,255,255,0.1);
+                    color:#FFF;
+                    transform:translate(-50%,-50%);
+                    border-radius:100%;
+                    opacity:0.66;
+                    .feather {
+                        //left:2px;
+                        width:50px;
+                        height:50px;
+                        stroke-width: 0.5;
+                        
+                    }
+                }
+            }
+            .testemonial-title {
+                font-weight:700;
+            }
+            .testemonial-organization {
+                font-size: 0.75rem;
+                font-weight: 500;
+                line-height: 1.2em;
+            }
+            .testemonial-description {
+                font-size: 0.75rem;
+                font-style: italic;
+                line-height: 1.2em;
+                opacity:0.5;
+            }
+            &:hover {
+                //color: var(--primary-color);
+                text-decoration:none;
+                .testemonial-image {
+                    img {
+                        mix-blend-mode:luminosity;
+                        opacity:0.5;
+                    }
+                    .play {
+                        background:#FFF;
+                        color:var(--primary-color);
+                        opacity:1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.article-list {
+    padding:0;
+    list-style-type: none;
+    li {
+        .article {
+            color: var(--text-color);
+            .article-image {
+                display:block;
+                img {
+                    width:100%;
+                }
+            }
+            .article-title {
+                font-weight:700;
+                a {
+                    color: var(--text-color);
+                    &:hover {
+                        color: var(--primary-color);
+                    }
+                }
+            }
+            .article-lead {
+                font-size:0.75rem;
+            }
+            .article-date {
+                font-size:0.75rem;
+                font-weight:700;
+                opacity:0.33;
+            }
+        }
+    }
+}
